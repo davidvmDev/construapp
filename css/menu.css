@@ -1,9 +1,4 @@
-﻿.statusbar-overlay {
-    background: #000000;
-}
-/* A bit of demo styles */
-
-.demo-swiper .swiper-slide {
+﻿.demo-swiper .swiper-slide {
     font-size: 25px;
     font-weight: 300;
     display: flex;
@@ -36,14 +31,3 @@
         .demo-swiper.demo-swiper-auto .swiper-slide:nth-child(3n) {
             width: 30%;
         }
-.iconos{
-    padding-left:13px;
-    padding-right:13px;
-}
-.navbar, .toolbar {
-    height: 59px;
-}
-.content-block {
-    color: #1a3263;
-   
-}
