@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/framework7.bundle.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
     <!-- App root element -->
@@ -28,19 +29,31 @@
                 <!-- Top Navbar -->
                 <div class="navbar">
                     <div class="navbar-inner">
-                        <div class="title">Awesome App</div>
+                        <div class="title">Construapp</div>
                         <div class="right">
-                            <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+                            <a href="#" class="link icon-only panel-open">
+                                <i class="icon icon-bars fas fa-bars panel-open"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
+
                 <!-- Bottom Toolbar -->
                 <div class="toolbar toolbar-bottom">
                     <div class="toolbar-inner">
-                        <!-- Toolbar links -->
-                        <a href="#" class="link">Link 2</a>
-                        <a href="#" class="link">Link 2</a>
+                        <i class="icon fas fa-home"></i>
+                        <i class="icon fas fa-search"></i>
+                        <i class="icon fas fa-heart"></i>
+                        <i class="icon fas fa-info"></i>
+                    </div>
+                </div>
+
+                <div class="panel panel-right panel-cover">
+                    <div class="block">
+                        <p>Right Panel content here</p>
+                        <p><a class="panel-close" href="#">Close me</a></p>
+                        <p><a class="panel-open" href="#" data-panel="left">Open Left Panel</a></p>
                     </div>
                 </div>
 
@@ -56,7 +69,7 @@
                             <div class="swiper-slide"><img src="img/taladro.jpg" class="imagenes"><p class="textos">Taladros<p></div>
                             <div class="swiper-slide"><img src="img/pulidora.jpg" class="imagenes"><p class="textos">Pulidoras<p></div>
                             <div class="swiper-slide"><img src="img/alicate.jpg" class="imagenes"><p class="textos">Alicates<p></div>
-                   
+
                         </div>
 
                     </div>
@@ -90,12 +103,12 @@
                             <div class="swiper-slide"><img src="img/promocion1.jpg" class="imagenes"></div>
                             <div class="swiper-slide"><img src="img/descuento.jpg" class="imagenes"></div>
                             <div class="swiper-slide"><img src="img/descuento40.jpg" class="imagenes"></div>
-                
+
                         </div>
                     </div>
 
                 </div>
-                    </div>
+            </div>
                 </div>
             </div>
         

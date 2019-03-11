@@ -40,38 +40,26 @@
     position: relative;
 }
 .textos {
-    position:absolute;
-
+    position: absolute;
 }
-.link, icon-only, open-panel {
-    min-width: 44px;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    margin: 0;
-    line-height: 44px;
-    height: 44px;
-    text-decoration: none;
-    position: relative;
-    transform: translateZ(0);
-    color: #007aff !important;
-    -webkit-tap-highlight-color: transparent;
+.icon {
+    color:#000;
+    padding-left:20px;
+    padding-right:20px;
 }
-icon, icon-bars {
-    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%…C12h34v2H8V12z%20M0%2C22h4v4H0V22z%20M8%2C23h34v2H8V23z'%2F%3E%3C%2Fsvg%3E);
-    height: 13px;
-    width: 21px;
-    display: block;
-    vertical-align: middle;
-    background-size: 100% auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-style: normal;
-    position: relative;
-    line-height: 44px;
-    color: #007aff !important;
+:root {
+    --f7-panel-width: 260px;
+    --f7-panel-bg-color: #fff;
+}
 
-    cursor: pointer;
+.ios {
+    --f7-panel-backdrop-bg-color: rgba(0, 0, 0, 0);
+    --f7-panel-transition-duration: 400ms;
+    --f7-panel-shadow: transparent;
+}
+
+.md {
+    --f7-panel-backdrop-bg-color: rgba(0, 0, 0, 0.2);
+    --f7-panel-transition-duration: 300ms;
+    --f7-panel-shadow: rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%;
 }
