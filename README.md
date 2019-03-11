@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <a href="https://www.patreon.com/vladimirkharlampidi"><img src="https://cdn.framework7.io/i/support-badge.png" height="20"></a>
 
 # Framework7
@@ -25,3 +26,9 @@ Tutorials available at https://framework7.io/tutorials/
 ## Showcase
 
 Appstore apps made with Framework7: https://framework7.io/showcase/
+=======
+# construapp
+David Velasquez 
+Contruapp
+Aplicacion para proyecto aplicado en tic
+>>>>>>> origin/master

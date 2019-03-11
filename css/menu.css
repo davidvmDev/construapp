@@ -43,3 +43,35 @@
     position:absolute;
 
 }
+.link, icon-only, open-panel {
+    min-width: 44px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0;
+    line-height: 44px;
+    height: 44px;
+    text-decoration: none;
+    position: relative;
+    transform: translateZ(0);
+    color: #007aff !important;
+    -webkit-tap-highlight-color: transparent;
+}
+icon, icon-bars {
+    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%…C12h34v2H8V12z%20M0%2C22h4v4H0V22z%20M8%2C23h34v2H8V23z'%2F%3E%3C%2Fsvg%3E);
+    height: 13px;
+    width: 21px;
+    display: block;
+    vertical-align: middle;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-style: normal;
+    position: relative;
+    line-height: 44px;
+    color: #007aff !important;
+
+    cursor: pointer;
+}
