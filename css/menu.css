@@ -43,9 +43,11 @@
     position: absolute;
 }
 .icon {
-    color:#000;
-    padding-left:20px;
-    padding-right:20px;
+    color:#000;   
+}
+.icons {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 :root {
     --f7-panel-width: 260px;
