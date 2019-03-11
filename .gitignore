@@ -23,3 +23,6 @@ $RECYCLE.BIN/
 # =========================
 README.md
 *.md
+.ts
+.less
+package.json
