@@ -51,3 +51,17 @@ app.on('panelClose', function (panel) {
 app.on('panelClosed', function (panel) {
     console.log('Panel ' + panel.side + ': closed');
 });
+
+$$('#price-filter').on('range:change', function (e, range) {
+    $$('.price-value').text('$' + (range.value[0]) + ' - $' + (range.value[1]));
+});
+
+var pickerDevice = app.picker.create({
+    inputEl: '#demo-picker-device',
+    cols: [
+        {
+            textAlign: 'center',
+            values: ['iPhone 4', 'iPhone 4S', 'iPhone 5', 'iPhone 5S', 'iPhone 6', 'iPhone 6 Plus', 'iPad 2', 'iPad Retina', 'iPad Air', 'iPad mini', 'iPad mini 2', 'iPad mini 3']
+        }
+    ]
+});
