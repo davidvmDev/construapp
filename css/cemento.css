@@ -20,3 +20,6 @@
 .page-content {
     background-color: #FAFBFD;
 }
+.item-inner::before{
+    
+}
