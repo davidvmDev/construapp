@@ -1,0 +1,13 @@
+
+README.md
+*.md
+.ts
+.less
+.package.json
+components/
+.json
+framework7.bundle.less
+framework7.esm.bundle.js
+framework7.esm.d.ts
+framework7.esm.js
+framework7.less

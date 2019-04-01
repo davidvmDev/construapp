@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="css/framework7.bundle.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/producto.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+    <!-- App root element -->
+    <div id="app">
+        <!-- Statusbar overlay -->
+        <div class="statusbar"></div>
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="home" class="page">
+
+                <!-- Top Navbar -->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="title">Construapp</div>
+                        <div class="right">
+                            <a href="#" class="link icon-only panel-open">
+                                <i class="icon icon-bars fas fa-bars panel-open"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Bottom Toolbar -->
+                <div class="toolbar toolbar-bottom">
+                    <div class="toolbar-inner">
+                        <i class="icon icons fas fa-home"></i>
+                        <i class="icon icons fas fa-search"></i>
+                        <i class="icon icons fas fa-heart"></i>
+                        <i class="icon icons fas fa-info"></i>
+                    </div>
+                </div>
+
+                <div class="panel panel-right panel-cover">
+                    <div class="block">
+                        <p>Falta todavia bastante</p>
+
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="card demo-card-header-pic">
+                        <div style="background-image:url(img/Pcemento.jpg)" class="card-header align-items-flex-end imagen"></div>
+                        <div class="card-content card-content-padding espacio">
+                            <h2>Cemento x 50kg</h2>
+                            <p id="descripcion">El cemento es un material que resulta de la combinación de arcilla molida con materiales calcáreos de polvo, en tanto, una vez que entran en contacto con el agua se solidifica y vuelve duro. Es mayormente empleado a instancias de la construcción, justamente por esa solidez que reviste, como adherente y aglutinante.</p>
+                            <h4>Elige Opciones y Agregados</h4>
+                            <div class="list">
+                                <ul>
+                                    <li>
+                                        <label class="item-checkbox item-content">
+
+                                            <div class="item-inner">
+                                                <div class="item-title">Con medidor</div>
+                                            </div>
+                                            <input type="checkbox" name="demo-checkbox" value="Books" checked="checked" />
+                                            <p class="adicion">+$15.000</p>
+                                            <i class="icon icon-checkbox"></i>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="item-checkbox item-content">
+
+                                            <div class="item-inner">
+                                                <div class="item-title">Con envio</div>
+                                            </div>
+                                            <input type="checkbox" name="demo-checkbox" value="Movies" />
+                                            <p class="adicion">+$5.000</p>
+                                            <i class="icon icon-checkbox"></i>
+                                        </label>
+                                    </li>
+
+                                </ul>
+                            </div>
+                           <h4>Elige la Cantidad</h4>
+                            <div class="list">
+                                <ul>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">Cantidad: <span id="cantidad-count"></span></div>
+                                            <div class="item-after">
+                                                <div class="stepper stepper-init stepper-small stepper-raised" data-value-el="#cantidad-count">
+                                                    <div class="stepper-button-minus"></div>
+                                                    <div class="stepper-button-plus"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>                                    
+                                </ul>
+                            </div>
+                        </div>
+                                      
+                        
+                               
+                            
+                            
+                        
+                        <div class="card-footer">
+                            <h3>Total: $22.000</h3>
+                             <div class="chip color-orange">
+                                 <div class="chip-label">Agregar al carrito</div>
+                            </div>
+                            
+                        </div>
+
+                     </div>
+
+
+                   
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="js/framework7.bundle.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/producto.js"></script>
+</body>
+</html>

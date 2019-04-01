@@ -1,0 +1,25 @@
+﻿
+.imagenes {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.textos {
+    position: absolute;
+}
+
+.icon {
+    color: #000;
+}
+
+
+    .ifiltro{
+        padding-right:10px;
+    }
+.page-content {
+    background-color: #FAFBFD;
+}
+.item-inner::before{
+    
+}
