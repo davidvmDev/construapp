@@ -4,4 +4,4 @@ README.md
 .ts
 .less
 package.json
-/components
+components/
