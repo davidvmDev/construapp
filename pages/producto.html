@@ -1,0 +1,148 @@
+﻿<template>
+    <div class="page" data-name="productos">
+        <div class="navbar">
+            <div class="navbar-inner sliding">
+                <a class="link back" href="/">
+                    <i class="icon icon-back"></i>
+                    <span class="if-not-md">Back</span>
+                </a>
+                <div class="title">Producto</div>
+                <div class="right">
+                    <a href="#" class="link icon-only panel-open" data-panel="right">
+                        <i class="icon f7-icons ios-only">menu</i>
+                        <i class="icon material-icons md-only">menu</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url(img/Pcemento.jpg)" class="card-header align-items-flex-end imagen"></div>
+                <div class="card-content card-content-padding espacio">
+                    <h2>Cemento x 50kg</h2>
+                    <p id="descripcion">El cemento es un material que resulta de la combinación de arcilla molida con materiales calcáreos de polvo, en tanto, una vez que entran en contacto con el agua se solidifica y vuelve duro. Es mayormente empleado a instancias de la construcción, justamente por esa solidez que reviste, como adherente y aglutinante.</p>
+                    <h4>Elige Opciones y Agregados</h4>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <label class="item-checkbox item-content">
+
+                                    <div class="item-inner">
+                                        <div class="item-title">Con medidor</div>
+                                    </div>
+                                    <input type="checkbox" name="demo-checkbox" value="Books" checked="checked" />
+                                    <p class="adicion">+$15.000</p>
+                                    <i class="icon icon-checkbox"></i>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="item-checkbox item-content">
+
+                                    <div class="item-inner">
+                                        <div class="item-title">Con envio</div>
+                                    </div>
+                                    <input type="checkbox" name="demo-checkbox" value="Movies" />
+                                    <p class="adicion">+$5.000</p>
+                                    <i class="icon icon-checkbox"></i>
+                                </label>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <h4>Elige la Cantidad</h4>
+                    <div class="list">
+                        <ul>
+                            <li class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">Cantidad: <span id="cantidad-count"></span></div>
+                                    <div class="item-after">
+                                        <div class="stepper stepper-init stepper-small stepper-raised" data-value-el="#cantidad-count">
+                                            <div class="stepper-button-minus"></div>
+                                            <div class="stepper-button-plus"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="card-footer">
+                    <h3>Total: $22.000</h3>
+                    <div class="chip color-orange">
+                        <div class="chip-label" id="chip">Agregar al carrito</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</template>
+<style>
+    .page-content {
+        background-color: #FAFBFD;
+    }
+
+    .demo-card-header-pic .card-header {
+        height: 40vw;
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+    }
+
+    .demo-card-header-pic .card-content-padding .date {
+        color: #8e8e93;
+    }
+
+    .espacio {
+        height: 430px;
+    }
+
+    .imagen {
+        height: 65vw !important;
+    }
+
+    #descripcion {
+        text-align: justify;
+    }
+
+    .adicion {
+        padding-right: 10px;
+    }
+
+    .block-title {
+        padding-bottom: 5px;
+    }
+
+    h4 {
+        color: #6d6d72;
+    }
+</style>
+<script>
+    $$('#chip').on('click', function (e) {
+        window.alert("Hola");
+    });
+
+</script>
+
+<!--<script>return {
+    data: function () {
+      var productId = this.$route.params.id;
+      var currentProduct;
+      this.$root.products.forEach(function (product) {
+        if (product.id === productId) {
+          currentProduct = product;
+        }
+      });
+      return {
+        product: currentProduct,
+      };
+    }
+  };</script>-->

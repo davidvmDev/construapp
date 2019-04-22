@@ -1,0 +1,250 @@
+<template>
+   
+    <div class="page" data-name="catalog">
+        <div class="navbar">
+            <div class="navbar-inner sliding">
+                <a class="link back" href="/">
+                    <i class="icon icon-back"></i>
+                    <span class="if-not-md">Back</span>
+                </a>
+                <div class="title">Catalog</div>
+                <div class="right">
+                    <a href="#" class="link icon-only panel-open" data-panel="right">
+                        <i class="icon f7-icons ios-only">menu</i>
+                        <i class="icon material-icons md-only">menu</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="block-title display-flex justify-content-space-between">Filtrar por precio<span class="price-value">$10000 - $20000</span></div>
+            <div class="list simple-list">
+                <ul>
+                    <li class="item-row">
+                        <div class="item-cell width-auto flex-shrink-0">
+                            
+                            <i class="icon material-icons md-only ">monetization_on</i>
+                        </div>
+                        <div class="item-cell item-cell-shrink-3">
+                            <!-- Dual range slider with all the parameters passed via data- attributes -->
+                            <div id="price-filter"
+                                 class="range-slider range-slider-init color-green"
+                                 data-label="true"
+                                 data-dual="true"
+                                 data-min="0"
+                                 data-max="100000"
+                                 data-step="1000"
+                                 data-value-left="10000"
+                                 data-value-right="20000"></div>
+                        </div>
+                        <div class="item-cell width-auto flex-shrink-0">
+                          
+                            <i class="icon material-icons md-only ">monetization_on</i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="block-title">Filtrar por peso</div>
+            <div class="list no-hairlines-md">
+
+                <ul>
+
+                    <li>
+
+                        <a class="item-link smart-select smart-select-init" data-open-in="popover">
+                            <select name="Tipo" multiple>
+                                <option value="50kg" selected>50kg</option>
+                                <option value="25kg">25kg</option>
+                                <option value="10kg">10kg</option>
+                            </select>
+                            <div class="item-content">
+                                <i class=" icon material-icons md-only ifiltro">all_inbox</i>
+                                <div class="item-inner chevron-center">
+                                    <div class="item-title">Peso</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="block-title" id="ej" onclick="ejemplo()">Filtrar por Marca</div>
+            <div class="list no-hairlines-md">
+                <ul>
+                    <li>
+                        <a class="item-link smart-select smart-select-init" data-open-in="popover">
+                            <select name="Marca" multiple>
+                                <option value="Argos" selected>Argos</option>
+                                <option value="Cemex">Cemex</option>
+                                <option value="Diamante">Diamante</option>
+                                <option value="Topex">Topex</option>
+                            </select>
+                            <div class="item-content">
+                                <i class="material-icons md-only icon ifiltro">group_work</i>
+                                <div class="item-inner chevron-center">
+                                    <div class="item-title">Marca</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="block-title">Filtrar por Deposito</div>
+            <div class="list no-hairlines-md">
+                <ul>
+                    <li>
+                        <a class="item-link smart-select smart-select-init" data-open-in="popover">
+                            <select name="Deposito" multiple>
+                                <option value="Titan" selected>Todos</option>
+                                <option value="Para Construir">Para Construir</option>
+                                <option value="Botero">Botero</option>
+                                <option value="Miranda">Miranda</option>
+                                <option value="San Pio">San Pio</option>
+                                <option value="Paris">Paris</option>
+                                <option value="Medina">Medina</option>
+                            </select>
+                            <div class="item-content">
+                                <i class="material-icons md-only icon ifiltro">store</i>
+                                <div class="item-inner chevron-center">
+                                    <div class="item-title">Deposito</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="list media-list">
+                <ul>
+                    <li>
+                        <a href="/producto/" class="item-link item-content">
+                            <div class="item-media"><img src="img/miranda.jpg" width="80" /></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">Cemento x 50 kg</div>
+                                    <div class="item-after">$22.0000</div>
+                                </div>
+                                <div class="item-subtitle"> Bulto Argos</div>
+                                <div class="item-text">Deposito Miranda. A 1.5km de tu ubicación </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-media"><img src="img/paraConstruir.jpg" width="80" /></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">Cemento x 50 kg</div>
+                                    <div class="item-after">$20.000</div>
+                                </div>
+                                <div class="item-subtitle">Bulto Cemex</div>
+                                <div class="item-text">Deposito Para construir.A 1.1km de tu Ubicación.</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-media"><img src="img/titan.jpg" width="80" /></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">Cemento x 25 kg</div>
+                                    <div class="item-after">$16.000</div>
+                                </div>
+                                <div class="item-subtitle">Bulto Argos</div>
+                                <div class="item-text">Deposito Titan. A 2.2km de tu Ubicación.</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-media"><img src="img/botero.jpg" width="80" /></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">Cemento x 25 kg</div>
+                                    <div class="item-after">$15.000</div>
+                                </div>
+                                <div class="item-subtitle">Bulto Diamante</div>
+                                <div class="item-text">Deposito Botero. A 4km de tu Ubicación.</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-media"><img src="img/medina.jpg" width="80" /></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">Cemento x 50 kg</div>
+                                    <div class="item-after">$19.000</div>
+                                </div>
+                                <div class="item-subtitle">Bulto Diamante</div>
+                                <div class="item-text">Deposito Medina. A 8.9km de tu Ubicación.</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-media"><img src="img/sanPio.jpg" width="80" /></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">Cemento x 50 kg</div>
+                                    <div class="item-after">$23.000</div>
+                                </div>
+                                <div class="item-subtitle">Bulto Argos</div>
+                                <div class="item-text">Deposito San pio. A 1.1km de tu Ubucacion.</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-media"><img src="img/parisD.jpg" width="80" /></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">Cemento x 50 kg</div>
+                                    <div class="item-after">$16.000</div>
+                                </div>
+                                <div class="item-subtitle">Bulto Topex</div>
+                                <div class="item-text">Deposito Paris. A0.4km de tu Ubicación.</div>
+                            </div>
+                        </a>
+
+
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+    <style>
+        .ifiltro {
+            padding-right: 10px;
+        }
+    </style>
+    <script>
+
+    </script>
+
+
+
+
+
+
+    <!--<div class="list links-list">
+            <ul>
+              {{#each products}}
+                <li><a href="/product/{{id}}/">{{title}}</a></li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </template>
+    <script>
+      return {
+        data: function () {
+          return {
+            products: this.$root.products,
+          };
+        }
+      };
+    </script>-->
