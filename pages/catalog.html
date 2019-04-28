@@ -28,7 +28,7 @@
                         <div class="item-cell item-cell-shrink-3">
                             <!-- Dual range slider with all the parameters passed via data- attributes -->
                             <div id="price-filter"
-                                 class="range-slider range-slider-init color-green"
+                                 class="range-slider range-slider-init color-orange"
                                  data-label="true"
                                  data-dual="true"
                                  data-min="0"
@@ -44,6 +44,11 @@
                     </li>
                 </ul>
             </div>
+            <script>
+                $$('#price-filter').on('range:change', function (e, range) {
+                    $$('.price-value').text('$' + (range.value[0]) + ' - $' + (range.value[1]));
+                });
+            </script>
             <div class="block-title">Filtrar por peso</div>
             <div class="list no-hairlines-md">
 
@@ -220,9 +225,7 @@
             padding-right: 10px;
         }
     </style>
-    <script>
-
-    </script>
+   
 
 
 

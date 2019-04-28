@@ -1,3 +1,4 @@
+
 var config = {
     apiKey: "AIzaSyDJS6peY9rslv81SoN2Q08JcSTnVFYD_2E",
     authDomain: "construapp-v1.firebaseapp.com",
@@ -15,18 +16,15 @@ $("#cerrar").click(function logout() {
     });
 });
 
-
 // Dom7
 var $$ = Dom7;
-
-
 
 
 // Framework7 App main instance
 var app  = new Framework7({
   root: '#app', // App root element
-  id: 'io.framework7.testapp', // App bundle ID
-  name: 'Framework7', // App name
+  id: 'io.framework7.construapp', // App bundle ID
+  name: 'Construapp', // App name
   theme: 'auto', // Automatic theme detection
   // App root data
   data: function () {
@@ -77,11 +75,9 @@ var catalogView = app.views.create('#view-catalog', {
 var settingsView = app.views.create('#view-settings', {
   url: '/settings/'
 });
+var range = app.range.create({ })
 
 
-$$('#price-filter').on('range:change', function (e, range) {
-    $$('.price-value').text('$' + (range.value[0]) + ' - $' + (range.value[1]));
-});
 
 
 

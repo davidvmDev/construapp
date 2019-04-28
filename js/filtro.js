@@ -10,4 +10,3 @@ function ejemplo2() {
     document.getElementById("ej2").innerHTML = mensaje;
 }
 
-
