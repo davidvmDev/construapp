@@ -22,13 +22,13 @@
                 <ul>
                     <li class="item-row">
                         <div class="item-cell width-auto flex-shrink-0">
-                            
+
                             <i class="icon material-icons md-only ">monetization_on</i>
                         </div>
                         <div class="item-cell item-cell-shrink-3">
                             <!-- Dual range slider with all the parameters passed via data- attributes -->
                             <div id="price-filter"
-                                 class="range-slider range-slider-init color-orange"
+                                 class="range-slider range-slider-init color-green"
                                  data-label="true"
                                  data-dual="true"
                                  data-min="0"
@@ -38,17 +38,16 @@
                                  data-value-right="20000"></div>
                         </div>
                         <div class="item-cell width-auto flex-shrink-0">
-                          
+
                             <i class="icon material-icons md-only ">monetization_on</i>
                         </div>
                     </li>
                 </ul>
             </div>
-            <script>
-                $$('#price-filter').on('range:change', function (e, range) {
+            <script>$$('#price-filter').on('range:change', function (e, range) {
                     $$('.price-value').text('$' + (range.value[0]) + ' - $' + (range.value[1]));
-                });
-            </script>
+                });</script>
+            
             <div class="block-title">Filtrar por peso</div>
             <div class="list no-hairlines-md">
 
@@ -225,7 +224,9 @@
             padding-right: 10px;
         }
     </style>
-   
+    <script>
+
+    </script>
 
 
 
