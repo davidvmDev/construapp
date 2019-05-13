@@ -1,5 +1,5 @@
 // JavaScript source code
-
+var contenido;
     
     function ejemplo() {
             var mensaje = "<strong>Un saludo</strong>";
@@ -9,5 +9,7 @@ function ejemplo2() {
     var mensaje = "<strong>Un saludo</strong>";
     document.getElementById("ej2").innerHTML = mensaje;
 }
+
+
 
 

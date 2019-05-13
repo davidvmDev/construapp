@@ -19,7 +19,11 @@ routes = [
   {
      path: '/producto/',
      componentUrl: './pages/producto.html',
-  },
+    },
+    {
+        path: '/prod/',
+        componentUrl:'./pages/prod.html',
+    },
   
   // Page Loaders & Router
   {
