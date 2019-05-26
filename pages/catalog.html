@@ -128,7 +128,7 @@
             <script>
                 var contenido;
                 function renderProd(doc) {
-                    contenido = "<li><a href=" + doc.data().direccion + " class='item-link item-content'><div class='item-media'><img src=" + doc.data().imgP + " width=" + 80 + " /></div><div class='item-inner'><div class='item-title-row'><div class='item-title'>" + doc.data().titulo + "</div><div class='item-after'>$" + doc.data().precio + "</div></div> <div class='item-subtitle'>" + doc.data().tipo + " " + doc.data().marca + "</div><div class='item-text'>" + doc.data().deposito + " " + doc.data().peso + "kg</div></div></a></li>";
+                    contenido = "<li><a href='/producto/"+doc.id+"/' class='item-link item-content'><div class='item-media'><img src=" + doc.data().imgP + " width=" + 80 + " /></div><div class='item-inner'><div class='item-title-row'><div class='item-title'>" + doc.data().titulo + "</div><div class='item-after'>$" + doc.data().precio + "</div></div> <div class='item-subtitle'>" + doc.data().tipo + " " + doc.data().marca + "</div><div class='item-text'>" + doc.data().deposito + " " + doc.data().peso + "kg</div></div></a></li>";
                     document.getElementById("lista").innerHTML += contenido;
                 }
 
@@ -201,8 +201,9 @@
     return {
         on: {
             pageInit: function (e, page) {
-                console.log("Page Init");
+                console.log("Hola");
             }
         }
     }
+    
 </script>

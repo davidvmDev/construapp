@@ -66,7 +66,7 @@
 }
 
 .espacio {
-    height: 470px;
+    height: 430px;
 }
 
 .imagen {
@@ -97,4 +97,12 @@ h4 {
     padding-top: 25px;
     
     padding-left: 15px;
+}
+
+#inputCant{
+    width:25px;
+   
+}
+.list input[type=number] {
+    height: 100% !important;
 }
