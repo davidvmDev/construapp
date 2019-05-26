@@ -75,13 +75,12 @@ var settingsView = app.views.create('#view-settings', {
     var marca = document.getElementById("marca").value;
     var peso = document.getElementById("peso").value;
 
-    var direccion = "./producto/";
+    
     db.collection('cemento').add({
         titulo: titulo,
         deposito: deposito,
         tipo: tipo,
-        precio: precio,
-        direccion: direccion,
+        precio: precio,       
         imgP: imagen,
         marca: marca,
         peso: peso

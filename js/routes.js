@@ -1,21 +1,20 @@
 routes = [
   {
     path: '/',
-    url: './menus.html',
+    url: './menu.html',
   },
   {
     path: '/about/',
     url: './pages/about.html',
   },
-  {
-      path: '/catalog/',
-      componentUrl: './pages/catalog.html',
-      routes : [
-          {
-          path: 'producto/',
+    {
+        path: '/catalog/',
+        componentUrl: './pages/catalog.html',
+    },
+    {
+          path: '/producto/:id/',
           componentUrl: './pages/producto.html',
-      }
-      ],
+      
       
   },
   {
