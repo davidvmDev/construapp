@@ -1,29 +1,29 @@
 routes = [
   {
     path: '/',
-    url: './menu.html',
+    url: './menus.html',
   },
   {
     path: '/about/',
     url: './pages/about.html',
   },
   {
-    path: '/catalog/',
+      path: '/catalog/',
       componentUrl: './pages/catalog.html',
+      routes : [
+          {
+          path: 'producto/',
+          componentUrl: './pages/producto.html',
+      }
+      ],
       
   },
   {
     path: '/settings/',
     url: './pages/settings.html',
   },
-  {
-     path: '/producto/',
-     componentUrl: './pages/producto.html',
-    },
-    {
-        path: '/prod/',
-        componentUrl:'./pages/prod.html',
-    },
+ 
+    
   
   // Page Loaders & Router
   {
@@ -53,9 +53,9 @@ routes = [
       setTimeout(function () {
         // We got user data from request
         var user = {
-          firstName: 'Vladimir',
-          lastName: 'Kharlampidi',
-          about: 'Hello, i am creator of Framework7! Hope you like it!',
+          firstName: 'David',
+          lastName: 'Velasquez',
+          about: 'Construapp, espero que algun dia sea un exito',
           links: [
             {
               title: 'Framework7 Website',

@@ -1,5 +1,5 @@
-﻿<template>
-    <div class="page" data-name="productos">
+﻿<template>   
+    <div class="page" data-name="catalog">
         <div class="navbar">
             <div class="navbar-inner sliding">
                 <a class="link back" href="/">
@@ -50,6 +50,7 @@
                         </ul>
                     </div>
                     <h4>Elige la Cantidad</h4>
+                    
                     <div class="list">
                         <ul>
                             <li class="item-content">
@@ -68,10 +69,6 @@
                 </div>
 
 
-
-
-
-
                 <div class="card-footer">
                     <h3>Total: $22.000</h3>
                     <div class="chip color-orange">
@@ -79,56 +76,29 @@
                     </div>
 
                 </div>
-
+               
             </div>
+
+            
 
         </div>
     </div>
+
 </template>
-<style>
-    .page-content {
-        background-color: #FAFBFD;
-    }
-
-    .demo-card-header-pic .card-header {
-        height: 40vw;
-        background-size: cover;
-        background-position: center;
-        color: #fff;
-    }
-
-    .demo-card-header-pic .card-content-padding .date {
-        color: #8e8e93;
-    }
-
-    .espacio {
-        height: 430px;
-    }
-
-    .imagen {
-        height: 65vw !important;
-    }
-
-    #descripcion {
-        text-align: justify;
-    }
-
-    .adicion {
-        padding-right: 10px;
-    }
-
-    .block-title {
-        padding-bottom: 5px;
-    }
-
-    h4 {
-        color: #6d6d72;
-    }
-</style>
 <script>
-    $$('#chip').on('click', function (e) {
-        window.alert("Hola");
-    });
+    return {
 
+        on: {
+
+            pageInit: function (e, page) {
+
+                console.log("From init");
+            }
+        }
+    }
 </script>
+
+
+
+
 

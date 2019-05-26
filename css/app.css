@@ -44,3 +44,57 @@
 .page-content {
     background-color: #FAFBFD;
 }
+
+#iconFiltro{
+    padding-right:3%;
+    padding-top:1%;
+}
+
+.page-content {
+    background-color: #FAFBFD;
+}
+
+.demo-card-header-pic .card-header {
+    height: 40vw;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.demo-card-header-pic .card-content-padding .date {
+    color: #8e8e93;
+}
+
+.espacio {
+    height: 430px;
+}
+
+.imagen {
+    height: 65vw !important;
+}
+
+#descripcion {
+    text-align: justify;
+}
+
+.adicion {
+    padding-right: 10px;
+}
+
+.block-title {
+    padding-bottom: 5px;
+}
+
+h4 {
+    color: #6d6d72;
+}
+
+#icarrito{
+    color:#000;
+    padding-top:3px;
+}
+.chipCarrito {
+    padding-top: 25px;
+    
+    padding-left: 15px;
+}

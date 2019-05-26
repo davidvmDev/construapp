@@ -28,32 +28,16 @@ var $$ = Dom7;
 var app  = new Framework7({
   root: '#app', // App root element
   id: 'io.framework7.testapp', // App bundle ID
-  name: 'Framework7', // App name
+  name: 'Construapp', // App name
   theme: 'auto', // Automatic theme detection
   // App root data
   data: function () {
     return {
       user: {
-        firstName: 'John',
-        lastName: 'Doe',
+        firstName: 'David',
+        lastName: 'Velasquez',
         },
-        products: [
-            {
-                titulo: '1',
-                title: 'Apple iPhone 8',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi tempora similique reiciendis, error nesciunt vero, blanditiis pariatur dolor, minima sed sapiente rerum, dolorem corrupti hic modi praesentium unde saepe perspiciatis.'
-            },
-            {
-                id: '2',
-                title: 'Apple iPhone 8 Plus',
-                description: 'Velit odit autem modi saepe ratione totam minus, aperiam, labore quia provident temporibus quasi est ut aliquid blanditiis beatae suscipit odio vel! Nostrum porro sunt sint eveniet maiores, dolorem itaque!'
-            },
-            {
-                id: '3',
-                title: 'Apple iPhone X',
-                description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
-            },
-        ]
+       
       // Demo products for Catalog section      
     };
   },
@@ -67,7 +51,7 @@ var app  = new Framework7({
   routes: routes,
 });
 
-
+console.log("init app");
 
 // Init/Create views
 var homeView = app.views.create('#view-home', {
@@ -80,39 +64,31 @@ var settingsView = app.views.create('#view-settings', {
   url: '/settings/'
 });
 
-//db.collection("cemento").get().then((querySnapshot) => {
-//    querySnapshot.forEach((doc) => {
-//        console.log(`${doc.tipo} => ${doc.data()}`);
-//    });
-//});
-//db.collection('cemento').add({
-
-//    place: "hola"
-//});
-
-//db.collection('cemento').get().then((snapshot) => {
-//    snapshot.docs.forEach(doc => {
-//        console.log(doc.data())
-//    })
-//})
 
     function Agregar () {
-    window.alert("hola");
+   
     var titulo = document.getElementById("titulo").value;
     var deposito = document.getElementById("deposito").value;
     var tipo = document.getElementById("tipo").value;
     var precio = document.getElementById("precio").value;
     var imagen = document.getElementById("url").value;
-    var direccion = "/producto/";
+    var marca = document.getElementById("marca").value;
+    var peso = document.getElementById("peso").value;
+
+    var direccion = "./producto/";
     db.collection('cemento').add({
         titulo: titulo,
         deposito: deposito,
         tipo: tipo,
         precio: precio,
         direccion: direccion,
-        imgP: imagen
-    });
+        imgP: imagen,
+        marca: marca,
+        peso: peso
+        });
+        window.alert("Producto Agregado");
 };
+
 
 
 

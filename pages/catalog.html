@@ -1,5 +1,4 @@
 <template>
-
     <div class="page" data-name="catalog">
         <div class="navbar">
             <div class="navbar-inner sliding">
@@ -48,7 +47,8 @@
             <script>
                 $$('#price-filter').on('range:change', function (e, range) {
                     $$('.price-value').text('$' + (range.value[0]) + ' - $' + (range.value[1]));
-                });</script>
+                });
+            </script>
 
             <div class="block-title">Filtrar por peso</div>
             <div class="list no-hairlines-md">
@@ -58,10 +58,10 @@
                     <li>
 
                         <a class="item-link smart-select smart-select-init" data-open-in="popover">
-                            <select name="Tipo" multiple>
-                                <option value="50kg" selected>50kg</option>
-                                <option value="25kg">25kg</option>
-                                <option value="10kg">10kg</option>
+                            <select name="Tipo" multiple id="pesoF">
+                                <option value="50" selected>50kg</option>
+                                <option value="25">25kg</option>
+                                <option value="10">10kg</option>
                             </select>
                             <div class="item-content">
                                 <i class=" icon material-icons md-only ifiltro">all_inbox</i>
@@ -78,7 +78,7 @@
                 <ul>
                     <li>
                         <a class="item-link smart-select smart-select-init" data-open-in="popover">
-                            <select name="Marca" multiple>
+                            <select name="Marca" multiple id="marcaF">
                                 <option value="Argos" selected>Argos</option>
                                 <option value="Cemex">Cemex</option>
                                 <option value="Diamante">Diamante</option>
@@ -99,9 +99,8 @@
                 <ul>
                     <li>
                         <a class="item-link smart-select smart-select-init" data-open-in="popover">
-                            <select name="Deposito" multiple>
-                                <option value="Titan" selected>Todos</option>
-                                <option value="Para Construir">Para Construir</option>
+                            <select name="Deposito" multiple id="depositoF">
+                                <option value="Para Construir" selected>Para Construir</option>
                                 <option value="Botero">Botero</option>
                                 <option value="Miranda">Miranda</option>
                                 <option value="San Pio">San Pio</option>
@@ -118,150 +117,92 @@
                     </li>
                 </ul>
             </div>
+            <div> <button class=" button button-fill color-orange" id="botonFiltro" onclick="filtrar()">Buscar</button></div>
+
 
             <div class="list media-list">
-                <ul id="lista">
-                    <!--<li>
-                    <a href="#" class="item-link item-content">
-                        <div class="item-media"><img src="img/miranda.jpg" width="80" /></div>
-                        <div class="item-inner">
-                            <div class="item-title-row">
-                                <div class="item-title">Cemento x 50 kg</div>
-                                <div class="item-after">$22.0000</div>
-                            </div>
-                            <div class="item-subtitle"> Bulto Argos</div>
-                            <div class="item-text">Deposito Miranda. A 1.5km de tu ubicación </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="/producto/" class="item-link item-content">
-                        <div class="item-media"><img src="img/paraConstruir.jpg" width="80" /></div>
-                        <div class="item-inner">
-                            <div class="item-title-row">
-                                <div class="item-title">Cemento x 50 kg</div>
-                                <div class="item-after">$20.000</div>
-                            </div>
-                            <div class="item-subtitle">Bulto Cemex</div>
-                            <div class="item-text">Deposito Para construir.A 1.1km de tu Ubicación.</div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="item-link item-content">
-                        <div class="item-media"><img src="img/titan.jpg" width="80" /></div>
-                        <div class="item-inner">
-                            <div class="item-title-row">
-                                <div class="item-title">Cemento x 25 kg</div>
-                                <div class="item-after">$16.000</div>
-                            </div>
-                            <div class="item-subtitle">Bulto Argos</div>
-                            <div class="item-text">Deposito Titan. A 2.2km de tu Ubicación.</div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="item-link item-content">
-                        <div class="item-media"><img src="img/botero.jpg" width="80" /></div>
-                        <div class="item-inner">
-                            <div class="item-title-row">
-                                <div class="item-title">Cemento x 25 kg</div>
-                                <div class="item-after">$15.000</div>
-                            </div>
-                            <div class="item-subtitle">Bulto Diamante</div>
-                            <div class="item-text">Deposito Botero. A 4km de tu Ubicación.</div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="item-link item-content">
-                        <div class="item-media"><img src="img/medina.jpg" width="80" /></div>
-                        <div class="item-inner">
-                            <div class="item-title-row">
-                                <div class="item-title">Cemento x 50 kg</div>
-                                <div class="item-after">$19.000</div>
-                            </div>
-                            <div class="item-subtitle">Bulto Diamante</div>
-                            <div class="item-text">Deposito Medina. A 8.9km de tu Ubicación.</div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="item-link item-content">
-                        <div class="item-media"><img src="img/sanPio.jpg" width="80" /></div>
-                        <div class="item-inner">
-                            <div class="item-title-row">
-                                <div class="item-title">Cemento x 50 kg</div>
-                                <div class="item-after">$23.000</div>
-                            </div>
-                            <div class="item-subtitle">Bulto Argos</div>
-                            <div class="item-text">Deposito San pio. A 1.1km de tu Ubucacion.</div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="item-link item-content">
-                        <div class="item-media"><img src="img/parisD.jpg" width="80" /></div>
-                        <div class="item-inner">
-                            <div class="item-title-row">
-                                <div class="item-title">Cemento x 50 kg</div>
-                                <div class="item-after">$16.000</div>
-                            </div>
-                            <div class="item-subtitle">Bulto Topex</div>
-                            <div class="item-text">Deposito Paris. A0.4km de tu Ubicación.</div>
-                        </div>
-                    </a>
+                <ul id="lista"></ul>
 
-
-                </li>-->
-
-
-                </ul>
             </div>
-        </div>
-        <script>
-            function renderProd(doc) {
-                contenido = "<li><a href=" + doc.data().direccion + " class='item-link item-content'><div class='item-media'><img src=" + doc.data().imgP + " width="+80+" /></div><div class='item-inner'><div class='item-title-row'><div class='item-title'>" + doc.data().titulo + "</div><div class='item-after'>$" + doc.data().precio + "</div></div> <div class='item-subtitle'>" + doc.data().tipo + "</div><div class='item-text'>" + doc.data().deposito + "</div></div></a></li>";
-                document.getElementById("lista").innerHTML += contenido;
-            }
 
-            db.collection('cemento').get().then((snapshot) => {
-                snapshot.docs.forEach(doc => {
-                    renderProd(doc);
+            <script>
+                var contenido;
+                function renderProd(doc) {
+                    contenido = "<li><a href=" + doc.data().direccion + " class='item-link item-content'><div class='item-media'><img src=" + doc.data().imgP + " width=" + 80 + " /></div><div class='item-inner'><div class='item-title-row'><div class='item-title'>" + doc.data().titulo + "</div><div class='item-after'>$" + doc.data().precio + "</div></div> <div class='item-subtitle'>" + doc.data().tipo + " " + doc.data().marca + "</div><div class='item-text'>" + doc.data().deposito + " " + doc.data().peso + "kg</div></div></a></li>";
+                    document.getElementById("lista").innerHTML += contenido;
+                }
+
+                db.collection('cemento').get().then((snapshot) => {
+                    snapshot.docs.forEach(doc => {
+                        renderProd(doc);
+                    })
                 })
-            })
 
-        </script>
-    </div>   
-</template>
-    <style>
-        .ifiltro {
-            padding-right: 10px;
-        }
-    </style>
-  
+                function filtrar() {
+                    document.getElementById("lista").innerHTML = "";
+                    db.collection('cemento').get().then((snapshot) => {
+                        snapshot.docs.forEach(doc => {
+                            filtrarP(doc);
+                        })
+                    })
+                }
+                function borrarEspacio() {
+                    $("#lista").dele
+                }
+                function filtrarP(doc) {
+                    var conta = 0;
+                    var contb = 0;
+                    var contc = 0;
+                    range = app.range.getValue(".range-slider");
+                    val1 = range[0];
+                    val2 = range[1];
+                    peso = $("#pesoF").val();
+                    marca = $("#marcaF").val();
+                    deposito = $("#depositoF").val();
+
+                    if (doc.data().precio >= val1 && doc.data().precio <= val2) {
+                        for (var i = 0; i < peso.length; i++) {
+                            if (peso[i] == doc.data().peso) conta++;
+                        }
+                        if (conta != 0) {
+                            for (var i = 0; i < marca.length; i++) {
+                                if (marca[i] == doc.data().marca) contb++;
+                            }
+                            if (contb != 0) {
+                                for (var i = 0; i < deposito.length; i++) {
+                                    if (deposito[i] == doc.data().deposito) contc++;
+                                }
+                                if (contc != 0) {
+                                    renderProd(doc);
+                                }
+                            }
+                        }
+
+                    }
 
 
+                }
 
-
-
-
-    <!--<div class="list links-list">
-            <ul>
-              {{#each products}}
-                <li><a href="/product/{{id}}/">{{title}}</a></li>
-              {{/each}}
-            </ul>
-          </div>
+            </script>
         </div>
-      </div>
-    </template>
-    <script>
-      return {
-        data: function () {
-          return {
-            products: this.$root.products,
-          };
+
+    </div>
+</template>
+
+<style>
+    .ifiltro {
+        padding-right: 10px;
+    }
+</style>
+
+
+
+<script>
+    return {
+        on: {
+            pageInit: function (e, page) {
+                console.log("Page Init");
+            }
         }
-      };
-    </script>-->
+    }
+</script>

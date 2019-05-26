@@ -11209,7 +11209,7 @@
     win[callbackCreateName] = null;
     delete win[callbackCreateName];
 
-    // Assign Template
+     Assign Template
     if (!component.template && !component.render) {
       component.template = template;
       component.templateType = templateType;
