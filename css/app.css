@@ -20,8 +20,13 @@
     border: 1px solid #ddd;
     background: #fff;
 }
-
-.demo-swiper {
+.swiper-slide {
+    border-radius: 23px 23px 23px 23px;
+    -moz-border-radius: 23px 23px 23px 23px;
+    -webkit-border-radius: 23px 23px 23px 23px;
+    border: 0.3px solid #f7dfdf;
+}
+    .demo-swiper {
     margin: 0px 0 35px;
     font-size: 18px;
     height: 120px;
@@ -31,10 +36,19 @@
     width: 100%;
     height: 100%;
     position: relative;
+    border-radius: 23px 23px 23px 23px;
+    -moz-border-radius: 23px 23px 23px 23px;
+    -webkit-border-radius: 23px 23px 23px 23px;
+    border: 0.3px solid #f7dfdf;
 }
 
 .textos {
     position: absolute;
+    margin-top: 30%;
+}
+.textos2 {
+    position: absolute;
+    margin-top: 20%;
 }
 .icons {
     padding-left: 20px;
@@ -66,7 +80,7 @@
 }
 
 .espacio {
-    height: 430px;
+    height: 440px;
 }
 
 .imagen {
@@ -89,7 +103,7 @@ h4 {
     color: #6d6d72;
 }
 
-#icarrito{
+.icarrito{
     color:#000;
     padding-top:3px;
 }
@@ -105,4 +119,12 @@ h4 {
 }
 .list input[type=number] {
     height: 100% !important;
+}
+mark {
+    background-color: #fff;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    border: 0.3px solid #f7dfdf;
+    margin:0px 2px 0px 2px 0px;
 }

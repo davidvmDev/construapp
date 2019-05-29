@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\framework7",
-    "\\img",
-    "\\js",
-    "\\pages"
+    "\\js"
   ],
   "SelectedNode": "\\js\\app.js",
   "PreviewInSolutionExplorer": false

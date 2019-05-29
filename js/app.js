@@ -13,6 +13,7 @@ const db = firebase.firestore();
 
 $("#cerrar").click(function logout() {
     firebase.auth().signOut().then(function () {
+        localStorage.setItem("Total", JSON.stringify(null));
         location.href = "index.html";
     }).catch(function (error) {
         // An error happened.
@@ -51,7 +52,7 @@ var app  = new Framework7({
   routes: routes,
 });
 
-console.log("init app");
+
 
 // Init/Create views
 var homeView = app.views.create('#view-home', {
@@ -87,8 +88,14 @@ var settingsView = app.views.create('#view-settings', {
         });
         window.alert("Producto Agregado");
 };
+$$('#vaciar').on('click', function () {
+    app.dialog.alert('Carrito Vaciado');
+    localStorage.setItem("Total", JSON.stringify(null));
+    $("#listaCar").empty();
+    $("#totalCar").empty();
+});
 
-
+   
 
 
 
