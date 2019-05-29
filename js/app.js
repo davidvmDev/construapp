@@ -10,7 +10,6 @@ firebase.initializeApp(config);
 // Initialize Cloud Firestore through Firebase
 const db = firebase.firestore();
 
-
 $("#cerrar").click(function logout() {
     firebase.auth().signOut().then(function () {
         localStorage.setItem("Total", JSON.stringify(null));
